@@ -1,0 +1,71 @@
+{
+  "intro": "I love to build, iterate, and deploy intelligent systems. Here's a snapshot of the core technologies, frameworks, and tools I use to turn AI ideas into real-world solutions:",
+  "skills": [
+    {
+      "title": "Languages & Databases",
+      "items": [
+        { "icon": "images/skills/python.png", "title": "Python" },
+        { "icon": "images/skills/mysql.png", "title": "MySQL" },
+        { "icon": "images/skills/mongo-db.png", "title": "MongoDB" },
+        { "icon": "images/skills/postgre.png", "title": "PostgreSQL" }
+      ]
+    },
+    {
+      "title": "Machine Learning & AI Frameworks",
+      "items": [
+        { "icon": "images/skills/scikit-learn.png", "title": "Scikit-learn" },
+        { "icon": "images/skills/pytorch.svg", "title": "PyTorch" },
+        { "icon": "images/skills/tensorflow.svg", "title": "TensorFlow" },
+        { "icon": "images/skills/keras.svg", "title": "Keras" },
+        { "icon": "images/skills/XGboost.png", "title": "XGBoost" },
+        { "icon": "images/skills/lightgbm.svg", "title": "LightGBM" }
+      ]
+    },
+    {
+      "title": "NLP & GenAI",
+      "items": [
+        { "icon": "images/skills/hugging-face.svg", "title": "Hugging Face" },
+        { "icon": "images/skills/langchain.svg", "title": "LangChain" },
+        { "icon": "images/skills/openai.png", "title": "OpenAI API" },
+        { "icon": "images/skills/SpaCy_logo.png", "title": "spaCy" }
+      ]
+    },
+    {
+      "title": "Data Analysis & Visualization",
+      "items": [
+        { "icon": "images/skills/Pandas.png", "title": "Pandas" },
+        { "icon": "images/skills/numpy.svg", "title": "NumPy" },
+        { "icon": "images/skills/matplotlib.png", "title": "Matplotlib" },
+        { "icon": "images/skills/seaborn.png", "title": "Seaborn" },
+        { "icon": "images/skills/plotly.jpeg", "title": "Plotly" }
+      ]
+    },
+    {
+      "title": "Deployment & MLOps",
+      "items": [
+        { "icon": "images/skills/docker.png", "title": "Docker" },
+        { "icon": "images/skills/kubernetes.png", "title": "Kubernetes" },
+        { "icon": "images/skills/MLflow.png", "title": "MLflow" },
+        { "icon": "images/skills/dvc.png", "title": "DVC" },
+        { "icon": "images/skills/fastapi.png", "title": "FastAPI" },
+        { "icon": "images/skills/flask.png", "title": "Flask" }
+      ]
+    },
+    {
+      "title": "Cloud & DevOps",
+      "items": [
+        { "icon": "images/skills/aws.png", "title": "AWS" },
+        { "icon": "images/skills/gcp.png", "title": "GCP" },
+        { "icon": "images/skills/git.png", "title": "Git" },
+        { "icon": "images/skills/github.svg", "title": "GitHub Actions" }
+      ]
+    },
+    {
+      "title": "Front-End / Prototyping",
+      "items": [
+        { "icon": "images/skills/streamlit.svg", "title": "Streamlit" },
+        { "icon": "images/skills/gradio.svg", "title": "Gradio" }
+      ]
+    }
+  ]
+}

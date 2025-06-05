@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Getting Started with React",
+    "date": "2025-06-01",
+    "content": "React is a JavaScript library for building user interfaces. You can create reusable components and manage state effectively.\n\n## Why React?\n- Component-based architecture\n- Great ecosystem\n- Strong community\n\nStart by running:\n\n```bash\nnpx create-react-app my-app\n```"
+  },
+  {
+    "title": "Understanding useEffect",
+    "date": "2025-06-03",
+    "content": "The `useEffect` hook lets you perform side effects in function components.\n\nExample:\n\n```js\nuseEffect(() => {\n  fetchData();\n}, []);\n```\n\nThis runs `fetchData()` only once when the component mounts."
+  },
+  {
+    "title": "Markdown Support in Blogs",
+    "date": "2025-06-04",
+    "content": "Our blog system supports **Markdown**, so you can format your text easily!\n\n### Features\n- Bold and italic\n- Headings\n- Code blocks\n\nWrite naturally and it will render beautifully."
+  }
+]

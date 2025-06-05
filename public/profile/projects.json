@@ -1,0 +1,139 @@
+{
+     "projects": [
+    {
+      "image": "images/projects/wildfire.jpg",
+      "title": "Wildfire Smoke Detector",
+      "bodyText": "An AI-powered vision system to detect early signs of wildfire smoke from aerial and satellite imagery. Implemented using CNN-based deep learning models with real-time monitoring capabilities for alert automation. Built a responsive web interface for visualizing detection zones and predictions.",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/Adity-star/Wildfire-smoke-detector"
+        }
+            ],
+            "tags": [
+        "Deep Learning",
+        "Computer Vision",
+        "TensorFlow",
+        "React",
+        "AI for Environment"
+      ]
+        },
+       {
+  "image": "images/projects/mcpyfinance.png",
+  "title": "MSEI Verified MCP YFinance Server",
+  "bodyText": "Developed and deployed a verified **Model Context Protocol (MCP)** server live at **[msei.ai](https://mseep.ai/)**. The server exposes structured stock market data from **Yahoo Finance** via a scalable, modular API designed for real-time consumption by **LLM agents**, **trading bots**, and **AI-driven analytics systems**. Built using **Django REST Framework**, deployed with **Gunicorn** on **Heroku**, and integrated with **SendGrid** for secured user operations.",
+  "links": [
+    {
+      "text": "GitHub",
+      "href": "https://github.com/Adity-star/mcp-yfinance-server"
+    },
+    {
+      "text": "Live Demo",
+      "href": "https://mseep.ai/app/adity-star-mcp-yfinance-server"
+    }
+  ],
+  "tags": [
+    "MCP Protocol",
+    "YFinance",
+    "LLM Integration",
+    "Real-time APIs"
+  ]
+}
+,
+        {
+  "image": "images/projects/breastcancer.png",
+  "title": "End-to-End Breast Cancer Classification",
+  "bodyText": "- Built a machine learning pipeline for breast cancer classification using DVC for data versioning and MLflow for experiment tracking. Included model training, evaluation, and deployment.",
+  "links": [
+    {
+      "text": "GitHub",
+      "href": "https://github.com/Adity-star/End-to-End-Breast-Cancer-Classification-Using-DVC-and-MLflow"
+    }
+  ],
+  "tags": ["Machine Learning", "MLflow", "DVC", "Python", "Data Science"]
+}
+,
+        {
+  "image":"images/projects/queryengine.jpg",
+  "title": "Multi-Lingual Query Engine",
+  "bodyText": "- Developed a search engine capable of processing and responding to queries in multiple languages using NLP techniques. Integrated translation APIs and vector search for semantic matching.",
+  "links": [
+    {
+      "text": "GitHub",
+      "href": "https://github.com/Adity-star/Multi-Lingual-Query-Engine"
+    }
+  ],
+  "tags": ["NLP", "Multilingual", "Search Engine", "Python", "API Integration"]
+}
+,
+        {
+            "title": "MVVM Sample App",
+            "bodyText": "- An Android App that loads data from mock API and show in both **LinearLayout** and **GridLayout RecyclerView**.\n - Offline support using **Room** DB and **NetworkBoundResource**.\n - Uses the **MVVM** architecture.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/mayankagarwal09/mvvm-sample-app"
+                }
+            ],
+            "tags" : [
+                "Kotlin",
+                "Android",
+                "MVVM",
+                "Room",
+                "Coroutines",
+                "Flow",
+                "Hilt-Dagger",
+                "NetworkBoundResource"
+            ]
+        },
+        {
+            "title": "Feed List App",
+            "bodyText": "- An Android App that loads list of feeds from a **paginated** API and shows in a RecyclerView.\n - Uses the **MVVM** architecture.\n - Uses **Paging 3** library along with other Architecture Components.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
+                }
+            ],
+            "tags" : [
+                "Kotlin",
+                "Android",
+                "MVVM",
+                "Paging 3",
+                "Coroutines",
+                "Flow"
+            ]
+        },
+        {
+            "title": "Task Tracker",
+            "bodyText": "- A simple Task Tracker web app made with **Angular 12**.\n - Uses **mock JSON server** to get, add, delete or update tasks.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/mayankagarwal09/task-tracker-app"
+                }
+            ],
+            "tags" : [
+                "TypeScript",
+                "Angular 12",
+                "JavaScript"
+            ]
+        },
+        {
+            "title": "Image Encryption/Decryption",
+            "bodyText": "- A Web App for Image Encryption and Decryption made in **Django**.\n - Uses **SDES** algorithm for encryption/decryption.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/mayankagarwal09/img-encrypt-sdes"
+                }
+            ],
+            "tags" : [
+                "Python",
+                "Django",
+                "SDES",
+                "Cryptography"
+            ]
+        }
+    ]
+}

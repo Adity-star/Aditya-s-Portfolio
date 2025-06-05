@@ -1,0 +1,37 @@
+{
+  "experiences": [
+    {
+      "title": "Freelance AI & Data Science Consultant",
+      "subtitle": "Self-Employed / Multiple Clients",
+      "workType": "Freelance",
+      "workDescription": [
+        "Delivered **8+ end-to-end AI solutions** to startups, nonprofits, and small businesses.",
+        "Built **LLM-powered research bots**, **RAG frameworks**, and **predictive models** tailored to client-specific problems.",
+        "Deployed solutions using **Docker, FastAPI**, and **Streamlit**, ensuring scalability and quick iteration cycles.",
+        "Worked directly with founders and technical teams to shape product direction and ML roadmap."
+      ],
+      "dateText": "Jul 2023 – Present"
+    },
+    {
+      "title": "LangChain & GenAI Systems Developer",
+      "subtitle": "Independent Projects",
+      "workType": "Product-Based Freelance",
+      "workDescription": [
+        "Built full-stack GenAI prototypes using **LangChain**, **LlamaIndex**, and **OpenAI API**.",
+        "Designed autonomous agents for tasks like stock research, document summarization, and chatbot interfaces.",
+        "Created reusable codebases and mini-frameworks for smart LLM pipelines, integrated with custom UIs."
+      ],
+      "dateText": "Mar 2023 – Present"
+    },
+    {
+      "title": "AI Research & Engineering Intern",
+      "subtitle": "Startup/NGO Collaborations",
+      "workType": "Internship",
+      "workDescription": [
+        "Collaborated on research-driven ML projects in NLP and predictive analytics.",
+        "Worked on **fake news detection**, **student performance prediction**, and **text summarization** tools using scikit-learn and HuggingFace."
+      ],
+      "dateText": "Aug 2022 – Feb 2023"
+    }
+  ]
+}
