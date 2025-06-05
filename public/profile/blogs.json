@@ -1,17 +1,73 @@
 [
   {
-    "title": "Getting Started with React",
+    "image": "images/blogs/wildfireblog.jpg",
+    "title": "From Data to Detection: Building a Wildfire Smoke Detection System with DVC, MLflow, and DagsHub",
+    "date": "2025-06-05",
+    "content": "Explore how to build a wildfire smoke detection system using DVC for data versioning, MLflow for experiment tracking, and DagsHub for collaboration. This post walks you through the entire machine learning lifecycle for a practical environmental application.\n\nKey Topics:\n- Data Versioning with DVC\n- Experiment Tracking with MLflow\n- Collaboration with DagsHub\n\nRead the full article here: [Wildfire Smoke Detection on Medium](https://medium.com/@aakuskar.980/from-data-to-detection-building-a-wildfire-smoke-detection-system-with-dvc-mlflow-and-dagshub-3e89f14fdde6?source=your_stories_page--------------------------------------------)",
+    "link": "https://medium.com/@aakuskar.980/from-data-to-detection-building-a-wildfire-smoke-detection-system-with-dvc-mlflow-and-dagshub-3e89f14fdde6?source=your_stories_page--------------------------------------------"
+  },
+  {
+  "image": "images/blogs/prompt.png",
+  "title": "Can a Single Prompt Unlock the Power of AI?",
+  "date": "2025-06-13",
+  "content": "Prompt engineering is becoming a key skill in interacting with advanced AI systems. This article explores how crafting the right prompt can unlock powerful responses and solve complex problems using large language models.\n\nHighlights:\n- The Art of Prompt Design\n- Real-World Applications\n- Prompt Engineering Techniques\n\nRead the full article here: [Read on Medium](https://medium.com/@aakuskar.980/can-a-single-prompt-unlock-the-power-of-ai-e57012ffd4b2?source=your_stories_page--------------------------------------------)",
+  "link": "https://medium.com/@aakuskar.980/can-a-single-prompt-unlock-the-power-of-ai-e57012ffd4b2?source=your_stories_page--------------------------------------------"
+  },
+  {
+  "image": "images/blogs/stock.png",
+  "title": "How I Built My Own Stock Server with Python, yFinance, and a Touch of Nerdy Ambition",
+  "date": "2025-06-06",
+  "content": "In this post, I walk you through how I built a personal stock data server using Python and the yFinance library. Learn how to fetch, serve, and visualize real-time market data while having fun nerding out on finance and automation.\n\nCovered Topics:\n- yFinance and Market APIs\n- Building REST APIs with Flask\n- Automating Data Fetch and Visualization\n\nRead the full article here: [Stock Server on Medium](https://medium.com/@aakuskar.980/how-i-built-my-own-stock-server-with-python-yfinance-and-a-touch-of-nerdy-ambition-b562dc1d7b93?source=your_stories_page--------------------------------------------)",
+  "link": "https://medium.com/@aakuskar.980/how-i-built-my-own-stock-server-with-python-yfinance-and-a-touch-of-nerdy-ambition-b562dc1d7b93?source=your_stories_page--------------------------------------------"
+  },
+  {
+    "image": "images/blogs/mcp.bin",
+    "title": "What is the Model-Context Protocol (MCP)?",
+    "date": "2025-06-07",
+    "content": "The Model-Context Protocol (MCP) is a framework designed to improve the interactions between AI models and their environments. It enables models to adapt dynamically to different contexts and perform better across various domains.\n\nKey Takeaways:\n- Contextualization in AI\n- Enhancing Model Interactions\n- Real-World Applications\n\nRead the full article here: [MCP Protocol on Medium](https://medium.com/@aakuskar.980/what-is-the-model-context-protocol-mcp-f6e287d62adc?source=your_stories_page--------------------------------------------)",
+    "link": "https://medium.com/@aakuskar.980/what-is-the-model-context-protocol-mcp-f6e287d62adc?source=your_stories_page--------------------------------------------"
+  },
+  {
+    "image": "images/blogs/agents.jpg",
+    "title": "AI Agents: The Invisible Workforce Revolutionizing Our World",
+    "date": "2025-06-08",
+    "content": "AI agents are transforming industries by automating tasks, solving problems, and even making decisions. These invisible workers are changing the way we approach work and productivity.\n\nTopics Covered:\n- Automation with AI Agents\n- Impact on Jobs and Industries\n- Future Trends in AI\n\nRead the full article here: [AI Agents on Medium](https://medium.com/@aakuskar.980/ai-agents-the-invisible-workforce-revolutionizing-our-world-a2905367f725?source=your_stories_page--------------------------------------------)",
+    "link": "https://medium.com/@aakuskar.980/ai-agents-the-invisible-workforce-revolutionizing-our-world-a2905367f725?source=your_stories_page--------------------------------------------"
+  },
+  {
+    "image": "images/blogs/lstm.png",
+    "title": "Understanding LSTM Networks: A Simplified Explanation",
     "date": "2025-06-01",
-    "content": "React is a JavaScript library for building user interfaces. You can create reusable components and manage state effectively.\n\n## Why React?\n- Component-based architecture\n- Great ecosystem\n- Strong community\n\nStart by running:\n\n```bash\nnpx create-react-app my-app\n```"
+    "content": "Long Short-Term Memory (LSTM) networks are a special kind of Recurrent Neural Network (RNN) designed to capture long-range dependencies in sequential data. They are especially useful for tasks like language modeling, time series forecasting, and machine translation.\n\n## Key Concepts\n- Memory Cells\n- Forget Gate\n- Input Gate\n\nRead the full article here: [Understanding LSTM Networks on Medium](https://medium.com/@aakuskar.980/understanding-lstm-networks-a-simplified-explanation-3659be6b4923?source=user_profile_page---------0-------------5c9ca647dacc----------------------)",
+    "link": "https://medium.com/@aakuskar.980/understanding-lstm-networks-a-simplified-explanation-3659be6b4923?source=user_profile_page---------0-------------5c9ca647dacc----------------------"
   },
   {
-    "title": "Understanding useEffect",
-    "date": "2025-06-03",
-    "content": "The `useEffect` hook lets you perform side effects in function components.\n\nExample:\n\n```js\nuseEffect(() => {\n  fetchData();\n}, []);\n```\n\nThis runs `fetchData()` only once when the component mounts."
+  "image": "images/blogs/finance.jpg",
+  "title": "How is AI Revolutionizing Finance? The Future of Money, Markets, and Your Wallet",
+  "date": "2025-06-12",
+  "content": "AI is reshaping the financial industry by automating trading, enhancing fraud detection, and personalizing banking services. This article explores how AI is driving smarter decision-making and transforming the future of finance.\n\nKey Topics:\n- AI in Banking & Trading\n- Fraud Detection Systems\n- Personalized Financial Services\n\nRead the full article here: [AI in Finance on Medium](https://medium.com/@aakuskar.980/how-is-ai-revolutionizing-finance-the-future-of-money-markets-and-your-wallet-445953106921)",
+  "link": "https://medium.com/@aakuskar.980/how-is-ai-revolutionizing-finance-the-future-of-money-markets-and-your-wallet-445953106921"
   },
   {
-    "title": "Markdown Support in Blogs",
-    "date": "2025-06-04",
-    "content": "Our blog system supports **Markdown**, so you can format your text easily!\n\n### Features\n- Bold and italic\n- Headings\n- Code blocks\n\nWrite naturally and it will render beautifully."
+  "image": "images/blogs/NLP.png",
+  "title": "The NLP Landscape: A Journey Through Time and Technology",
+  "date": "2025-06-11",
+  "content": "Natural Language Processing (NLP) has evolved from rule-based systems to deep learning transformers. This article walks through the historical progress, breakthroughs, and future of NLP.\n\nHighlights:\n- Rule-Based to Statistical NLP\n- Deep Learning & Transformers\n- Current Trends & Challenges\n\nRead the full article here: [The NLP Landscape on Medium](https://medium.com/@aakuskar.980/the-nlp-landscape-a-journey-through-time-and-technology-9802c2a43200?source=your_stories_page--------------------------------------------)",
+  "link": "https://medium.com/@aakuskar.980/the-nlp-landscape-a-journey-through-time-and-technology-9802c2a43200?source=your_stories_page--------------------------------------------"
+  },
+  {
+    "image": "images/blogs/dataaug.png",
+    "title": "Data Augmentation: Enhancing Machine Learning Models with Synthetic Data",
+    "date": "2025-06-09",
+    "content": "Data augmentation is a technique that helps improve machine learning models by generating synthetic data to overcome limited or imbalanced datasets. Learn how data augmentation can improve model performance.\n\nWhat You’ll Learn:\n- Techniques of Data Augmentation\n- Benefits for Model Generalization\n- Real-World Applications\n\nRead the full article here: [Data Augmentation on Medium](https://medium.com/@aakuskar.980/data-augmentation-enhancing-machine-learning-models-with-synthetic-data-6c271b4f1275?source=your_stories_page--------------------------------------------)",
+    "link": "https://medium.com/@aakuskar.980/data-augmentation-enhancing-machine-learning-models-with-synthetic-data-6c271b4f1275?source=your_stories_page--------------------------------------------"
+  },
+  {
+    "image": "images/blogs/futureds.jpg",
+    "title": "The Future of Data Science",
+    "date": "2025-06-10",
+    "content": "Data science is evolving rapidly, and the future holds exciting opportunities. This article discusses upcoming trends, challenges, and the skill sets required to succeed in the world of data science.\n\nKey Points:\n- Emerging Trends in Data Science\n- The Role of Automation and AI\n- Key Skills for Future Data Scientists\n\nRead the full article here: [Future of Data Science on Medium](https://medium.com/@aakuskar.980/future-of-data-science-d8defbd39bc7?source=your_stories_page--------------------------------------------)",
+    "link": "https://medium.com/@aakuskar.980/future-of-data-science-d8defbd39bc7?source=your_stories_page--------------------------------------------"
   }
 ]
+

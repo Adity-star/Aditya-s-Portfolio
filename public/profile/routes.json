@@ -26,7 +26,7 @@
             "headerTitle": "Projects"
         },
         {
-            "component": "Blogs",
+            "component": "blogs.jsx",
             "path": "/blogs",
             "headerTitle": "Blogs"
         }

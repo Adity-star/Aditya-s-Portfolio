@@ -1,139 +1,152 @@
 {
-     "projects": [
+  "projects": [
     {
       "image": "images/projects/wildfire.jpg",
       "title": "Wildfire Smoke Detector",
-      "bodyText": "An AI-powered vision system to detect early signs of wildfire smoke from aerial and satellite imagery. Implemented using CNN-based deep learning models with real-time monitoring capabilities for alert automation. Built a responsive web interface for visualizing detection zones and predictions.",
+      "bodyText": "An **AI-powered computer vision system** designed to detect early wildfire smoke using **CNN-based deep learning models**. Enabled real-time environmental monitoring with a responsive UI for **geospatial visualization** and dynamic alert zones.",
       "links": [
-        {
-          "text": "GitHub",
-          "href": "https://github.com/Adity-star/Wildfire-smoke-detector"
-        }
-            ],
-            "tags": [
-        "Deep Learning",
-        "Computer Vision",
-        "TensorFlow",
-        "React",
-        "AI for Environment"
-      ]
-        },
-       {
-  "image": "images/projects/mcpyfinance.png",
-  "title": "MSEI Verified MCP YFinance Server",
-  "bodyText": "Developed and deployed a verified **Model Context Protocol (MCP)** server live at **[msei.ai](https://mseep.ai/)**. The server exposes structured stock market data from **Yahoo Finance** via a scalable, modular API designed for real-time consumption by **LLM agents**, **trading bots**, and **AI-driven analytics systems**. Built using **Django REST Framework**, deployed with **Gunicorn** on **Heroku**, and integrated with **SendGrid** for secured user operations.",
-  "links": [
-    {
-      "text": "GitHub",
-      "href": "https://github.com/Adity-star/mcp-yfinance-server"
+        { "text": "GitHub", "href": "https://github.com/Adity-star/Wildfire-smoke-detector" }
+      ],
+      "tags": ["Deep Learning", "Computer Vision", "TensorFlow", "React", "AI for Environment"]
+    },
+      {
+    "image": "images/projects/mcpyfinance.png",
+    "title": "MCP-YFinance Server (Verified by MSeeP)",
+    "bodyText": "A **verified MCP (Model Context Protocol)** live at [Mseep](https://mseep.ai/) fetching **real-time stock market data** from Yahoo Finance. Built with the **MCP architecture**, tightly integrated with **LLM agents**, and deployed via **MSSEP** with secure, authenticated endpoints. Enables seamless AI-driven financial analysis and insights.",
+    "links": [
+      { "text": "GitHub", "href": "https://github.com/Adity-star/mcp-yfinance-server" },
+      { "text": "Live Demo", "href": "https://msei.ai/app/adity-star-mcp-yfinance-server" }
+    ],
+    "tags": ["MCP Protocol", "Yahoo Finance", "LLM Integration", "Real-time API", "MSSEP"]
     },
     {
-      "text": "Live Demo",
-      "href": "https://mseep.ai/app/adity-star-mcp-yfinance-server"
+      "image": "images/projects/breastcancer.png",
+      "title": "End-to-End Breast Cancer Classification",
+      "bodyText": "An **ML pipeline** for cancer diagnosis using **DVC** and **MLflow** for **version control**, **experiment tracking**, and reproducible workflows. Deployed for real-time classification and evaluation.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/End-to-End-Breast-Cancer-Classification-Using-DVC-and-MLflow" }
+      ],
+      "tags": ["Machine Learning", "MLflow", "DVC", "Python", "Data Science"]
+    },
+    {
+      "image": "images/projects/queryengine.jpg",
+      "title": "Multi-Lingual Query Engine",
+      "bodyText": "A **semantic search engine** that supports **multi-language NLP queries** via translation APIs and **vector-based retrieval**. Combines embeddings, cosine similarity, and context matching for global accessibility.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/Multi-Lingual-Query-Engine" }
+      ],
+      "tags": ["NLP", "Multilingual", "Search Engine", "Python", "API Integration"]
+    },
+    {
+      "image": "images/projects/autoinsurance.jpg",
+      "title": "Vehicle Data Pipeline Project",
+      "bodyText": "An **end-to-end ML pipeline** for **auto insurance claim prediction**, integrating **data cleaning**, **feature engineering**, **model training**, and evaluation with **Scikit-learn**.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/AutoClaimML" }
+      ],
+      "tags": ["Data Pipeline", "Machine Learning", "Python", "Pandas", "Scikit-learn"]
+    },
+    {
+      "image": "images/projects/textsummarization.png",
+      "title": "Text Summarization Project",
+      "bodyText": "An NLP solution that performs **abstractive and extractive summarization** using **Hugging Face Transformers** (BART, T5). Enables accurate condensation of long-form content into concise summaries.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/Text-Summarization-Project" }
+      ],
+      "tags": ["NLP", "Text Summarization", "Transformers", "Hugging Face", "Python"]
+    },
+    {
+      "image": "images/projects/perform.jpg",
+      "title": "Student Performance Predictor",
+      "bodyText": "Built a **predictive analytics model** using **Scikit-learn and Pandas** to forecast student outcomes. Applied feature engineering, classification algorithms, and model tuning for accuracy.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/Students-Performance-indicator" }
+      ],
+      "tags": ["Machine Learning", "Student Analytics", "Python", "Scikit-learn", "Pandas"]
+    },
+    {
+      "image": "images/projects/movie.png",
+      "title": "Movie Recommender System",
+      "bodyText": "Developed a **hybrid recommender engine** using **collaborative filtering**, **content-based filtering**, and **metadata APIs** to personalize user recommendations with cosine similarity scoring.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/Movie-Recommender-System" }
+      ],
+      "tags": ["Recommender System", "Machine Learning", "Python", "Pandas", "Scikit-learn"]
+    },
+    {
+      "image": "images/projects/whatsapp.png",
+      "title": "WhatsApp Chat Analyzer",
+      "bodyText": "Built a **Streamlit dashboard** that visualizes WhatsApp chat data. Features include **emoji trends**, **user analytics**, **temporal heatmaps**, and **word cloud generation** using regex and Pandas.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/Whatsapp-chat-analyzer" }
+      ],
+      "tags": ["Python", "Streamlit", "Data Visualization", "Chat Analysis", "Pandas"]
+    },
+    {
+      "image": "images/projects/R.jpg",
+      "title": "Accident Severity Predictor",
+      "bodyText": "A machine learning model for **predicting traffic accident severity** using real-world datasets. Applied **ensemble techniques**, **class imbalance handling**, and **feature engineering**.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/Road-Traffic-Accident-Severity-Prediction" }
+      ],
+      "tags": ["Machine Learning", "Accident Analysis", "Python", "Scikit-learn", "Pandas"]
+    },
+    {
+      "image": "images/projects/research.png",
+      "title": "Autonomous Research Agent",
+      "bodyText": "Engineered a **LangChain-based LLM agent** to autonomously retrieve, analyze, and summarize web content and academic material. Features **multi-step reasoning**, **document parsing**, and **agentic workflow orchestration**.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/Research-Agent" }
+      ],
+      "tags": ["AI Agent", "LangChain", "Web Scraping", "LLMs", "Python"]
+
+    },
+
+    {
+      "image": "images/projects/langchain.jpg",
+      "title": "LangChain Mastery Series",
+      "bodyText": "A comprehensive open-source guide to mastering **LangChain**, including modules on memory, chains, tools, and agents. Structured for practical learners with real code patterns and applied examples.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/LangChainMastery" }
+      ],
+      "tags": ["LangChain", "LLMs", "AI Tools", "Tutorial", "Open Source"]
+    },
+    {
+      "image": "images/projects/rag.png",
+      "title": "RAG Framework – Complete Guide",
+      "bodyText": "Built a modular guide to **Retrieval-Augmented Generation (RAG)** systems using LangChain and OpenAI. Includes indexing, embedding, custom retrievers, and integration workflows.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/CompleteRAG" }
+      ],
+      "tags": ["RAG", "LangChain", "LLMs", "GenAI", "Knowledge Retrieval"]
+    },
+    {
+      "image": "images/projects/dsguide.jpg",
+      "title": "Complete Data Science Guide",
+      "bodyText": "An end-to-end learning roadmap for aspiring data scientists. Covers core concepts in **ML, Python, statistics, EDA, deployment**, and project building. Designed to help learners go from zero to job-ready.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/Complete-DataScience-Guide" }
+      ],
+      "tags": ["Data Science", "Learning Path", "Python", "Machine Learning", "Career"]
+    },
+     {
+      "image": "images/projects/genai.png",
+      "title": "Generative AI Learning Resources",
+      "bodyText": "A curated collection of guides, tools, and frameworks to learn and build with **Generative AI**. Includes prompt engineering, image generation, LLM fine-tuning, and application architecture walkthroughs.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/Generative-AI" }
+      ],
+      "tags": ["Generative AI", "Prompt Engineering", "LLMs", "Tutorial", "AI Applications"]
+    },
+     {
+      "image": "images/projects/reinforcement.jpg",
+      "title": "Reinforcement Learning Playground",
+      "bodyText": "A hands-on repository for experimenting with **Reinforcement Learning** algorithms such as Q-learning, DQN, and policy gradients. Includes custom environments, training curves, and Python implementations to solidify RL fundamentals.",
+      "links": [
+        { "text": "GitHub", "href": "https://github.com/Adity-star/Reinforcement-Learning" }
+      ],
+      "tags": ["Reinforcement Learning", "Q-Learning", "Policy Gradient", "AI", "Python"]
     }
-  ],
-  "tags": [
-    "MCP Protocol",
-    "YFinance",
-    "LLM Integration",
-    "Real-time APIs"
   ]
 }
-,
-        {
-  "image": "images/projects/breastcancer.png",
-  "title": "End-to-End Breast Cancer Classification",
-  "bodyText": "- Built a machine learning pipeline for breast cancer classification using DVC for data versioning and MLflow for experiment tracking. Included model training, evaluation, and deployment.",
-  "links": [
-    {
-      "text": "GitHub",
-      "href": "https://github.com/Adity-star/End-to-End-Breast-Cancer-Classification-Using-DVC-and-MLflow"
-    }
-  ],
-  "tags": ["Machine Learning", "MLflow", "DVC", "Python", "Data Science"]
-}
-,
-        {
-  "image":"images/projects/queryengine.jpg",
-  "title": "Multi-Lingual Query Engine",
-  "bodyText": "- Developed a search engine capable of processing and responding to queries in multiple languages using NLP techniques. Integrated translation APIs and vector search for semantic matching.",
-  "links": [
-    {
-      "text": "GitHub",
-      "href": "https://github.com/Adity-star/Multi-Lingual-Query-Engine"
-    }
-  ],
-  "tags": ["NLP", "Multilingual", "Search Engine", "Python", "API Integration"]
-}
-,
-        {
-            "title": "MVVM Sample App",
-            "bodyText": "- An Android App that loads data from mock API and show in both **LinearLayout** and **GridLayout RecyclerView**.\n - Offline support using **Room** DB and **NetworkBoundResource**.\n - Uses the **MVVM** architecture.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/mvvm-sample-app"
-                }
-            ],
-            "tags" : [
-                "Kotlin",
-                "Android",
-                "MVVM",
-                "Room",
-                "Coroutines",
-                "Flow",
-                "Hilt-Dagger",
-                "NetworkBoundResource"
-            ]
-        },
-        {
-            "title": "Feed List App",
-            "bodyText": "- An Android App that loads list of feeds from a **paginated** API and shows in a RecyclerView.\n - Uses the **MVVM** architecture.\n - Uses **Paging 3** library along with other Architecture Components.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
-                }
-            ],
-            "tags" : [
-                "Kotlin",
-                "Android",
-                "MVVM",
-                "Paging 3",
-                "Coroutines",
-                "Flow"
-            ]
-        },
-        {
-            "title": "Task Tracker",
-            "bodyText": "- A simple Task Tracker web app made with **Angular 12**.\n - Uses **mock JSON server** to get, add, delete or update tasks.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/task-tracker-app"
-                }
-            ],
-            "tags" : [
-                "TypeScript",
-                "Angular 12",
-                "JavaScript"
-            ]
-        },
-        {
-            "title": "Image Encryption/Decryption",
-            "bodyText": "- A Web App for Image Encryption and Decryption made in **Django**.\n - Uses **SDES** algorithm for encryption/decryption.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/img-encrypt-sdes"
-                }
-            ],
-            "tags" : [
-                "Python",
-                "Django",
-                "SDES",
-                "Cryptography"
-            ]
-        }
-    ]
-}
+

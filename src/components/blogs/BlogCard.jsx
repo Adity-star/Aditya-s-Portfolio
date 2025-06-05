@@ -1,46 +1,14 @@
 import React, { useContext } from 'react';
-import {
-  Button, Card, Badge, Col,
-} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { ThemeContext } from 'styled-components';
-import ReactMarkdown from 'react-markdown';
 
-const styles = {
-  badgeStyle: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingTop: 5,
-    paddingBottom: 5,
-    margin: 5,
-  },
-  cardStyle: {
-    borderRadius: 10,
-  },
-  cardTitleStyle: {
-    fontSize: 24,
-    fontWeight: 700,
-  },
-  cardTextStyle: {
-    textAlign: 'left',
-  },
-  linkStyle: {
-    textDecoration: 'none',
-    padding: 10,
-  },
-  buttonStyle: {
-    margin: 5,
-  },
-};
-
-const ProjectCard = ({ project }) => {
+const BlogCard = ({ blog }) => {
   const theme = useContext(ThemeContext);
-  const parseBodyText = (text) => <ReactMarkdown children={text} />;
-
+  
   return (
-    <article className="project-card">
+    <article className="blog-card">
       <style jsx>{`
-        .project-card {
+        .blog-card {
           border: none;
           border-radius: 20px;
           overflow: hidden;
@@ -59,7 +27,7 @@ const ProjectCard = ({ project }) => {
           border: 1px solid ${theme.cardBorderColor};
         }
 
-        .project-card:hover {
+        .blog-card:hover {
           transform: translateY(-10px) scale(1.02);
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
           background: ${theme.cardFooterBackground};
@@ -79,7 +47,7 @@ const ProjectCard = ({ project }) => {
           transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .project-card:hover .card-image-wrapper img {
+        .blog-card:hover .card-image-wrapper img {
           transform: scale(1.1);
         }
 
@@ -92,7 +60,7 @@ const ProjectCard = ({ project }) => {
           justify-content: space-between;
         }
 
-        .project-title {
+        .blog-title {
           font-weight: 700;
           font-size: 1.5rem;
           color: ${theme.color};
@@ -101,7 +69,7 @@ const ProjectCard = ({ project }) => {
           line-height: 1.3;
         }
 
-        .project-content {
+        .blog-content {
           flex: 1;
           font-size: 1rem;
           color: ${theme.color};
@@ -115,14 +83,7 @@ const ProjectCard = ({ project }) => {
           opacity: 0.8;
         }
 
-        .project-links {
-          display: flex;
-          gap: 1rem;
-          margin-top: auto;
-          flex-wrap: wrap;
-        }
-
-        .project-link {
+        .blog-link {
           background: ${theme.accentColor};
           color: #fff;
           padding: 10px 20px;
@@ -138,7 +99,7 @@ const ProjectCard = ({ project }) => {
           font-size: 1rem;
         }
 
-        .project-link:hover {
+        .blog-link:hover {
           box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
           transform: scale(1.05);
           outline: none;
@@ -146,14 +107,7 @@ const ProjectCard = ({ project }) => {
           opacity: 0.9;
         }
 
-        .project-tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-          margin-top: 1rem;
-        }
-
-        .project-tag {
+        .blog-tag {
           background: ${theme.cardFooterBackground};
           color: ${theme.color};
           border-radius: 12px;
@@ -165,13 +119,13 @@ const ProjectCard = ({ project }) => {
           border: 1px solid ${theme.cardBorderColor};
         }
 
-        .project-tag:hover {
+        .blog-tag:hover {
           background: ${theme.accentColor};
           color: #fff;
         }
 
         @media (max-width: 1200px) {
-          .project-card {
+          .blog-card {
             min-height: 480px;
           }
 
@@ -181,7 +135,7 @@ const ProjectCard = ({ project }) => {
         }
 
         @media (max-width: 768px) {
-          .project-card {
+          .blog-card {
             min-height: 450px;
           }
 
@@ -193,7 +147,7 @@ const ProjectCard = ({ project }) => {
             padding: 1.25rem;
           }
 
-          .project-title {
+          .blog-title {
             font-size: 1.3rem;
           }
         }
@@ -201,31 +155,28 @@ const ProjectCard = ({ project }) => {
 
       <div className="card-image-wrapper">
         <img
-          src={project.image}
-          alt={`Screenshot of ${project.title}`}
+          src={blog.image}
+          alt={`Cover for ${blog.title}`}
           loading="lazy"
         />
       </div>
       <div className="card-body">
-        <h2 className="project-title">{project.title}</h2>
-        <p className="project-content">{parseBodyText(project.bodyText)}</p>
-        <div className="project-links">
-          {project?.links?.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
-              {link.text}
-            </a>
-          ))}
+        <h2 className="blog-title">{blog.title}</h2>
+        <p className="blog-content">{blog.bodyText}</p>
+        <div className="blog-links">
+          <a
+            href={blog.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="blog-link"
+          >
+            Read More
+          </a>
         </div>
-        {project.tags && (
-          <div className="project-tags">
-            {project.tags.map((tag) => (
-              <span key={tag} className="project-tag">
+        {blog.tags && (
+          <div className="blog-tags">
+            {blog.tags.map((tag) => (
+              <span key={tag} className="blog-tag">
                 {tag}
               </span>
             ))}
@@ -236,17 +187,14 @@ const ProjectCard = ({ project }) => {
   );
 };
 
-ProjectCard.propTypes = {
-  project: PropTypes.shape({
+BlogCard.propTypes = {
+  blog: PropTypes.shape({
     title: PropTypes.string.isRequired,
     bodyText: PropTypes.string.isRequired,
     image: PropTypes.string,
-    links: PropTypes.arrayOf(PropTypes.shape({
-      text: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired,
-    })),
+    link: PropTypes.string.isRequired,
     tags: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
 };
 
-export default ProjectCard;
+export default BlogCard; 
