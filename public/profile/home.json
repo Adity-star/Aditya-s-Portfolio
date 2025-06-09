@@ -1,4 +1,9 @@
 {
-    "name": "Aditya Ak ",
-    "roles": ["AI Engineer", "A Freelancer"]
+  "name": "Aditya Ak",
+  "roles": ["AI Engineer", "Machine Learning Developer", "Deep Learning Enthusiast", "AI Solution Builder"],
+  "tagline": "Passionate AI Engineer crafting intelligent solutions using deep learning ,NLP and Generative AI.",
+  "location": "India",
+  "cta": {
+    "resumeLink": "/resume.pdf"
+  }
 }

@@ -1,19 +1,31 @@
-.vertical {
-    justify-content: center;
-}
-
+.vertical,
 .vertical_alternating {
-    justify-content: center;
+  justify-content: center;
+  display: flex;
 }
 
+/* Tweak card layout on smaller devices */
 @media only screen and (max-width: 578px) {
-    div.vertical-item-row > div:nth-child(1) {
-        width: 20% !important;
-    }
-    div.vertical-item-row > div:nth-child(2) {
-        width: 65% !important;
-    }
-    div.vertical-item-row > div:nth-child(3) {
-        width: 15% !important;
-    }
+  div.vertical-item-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  div.vertical-item-row > div:nth-child(1) {
+    width: 22% !important;  /* Date */
+    text-align: left;
+  }
+
+  div.vertical-item-row > div:nth-child(2) {
+    width: 63% !important;  /* Card Content */
+  }
+
+  div.vertical-item-row > div:nth-child(3) {
+    width: 15% !important;  /* Icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -12,7 +12,6 @@ const Projects = (props) => {
   const theme = useContext(ThemeContext);
   const { header } = props;
   const [data, setData] = useState(null);
-  const [showMore, setShowMore] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
@@ -135,6 +134,36 @@ const Projects = (props) => {
           font-size: 1.1rem;
         }
 
+        .ribbon {
+        width: 100px;
+        height: 28px;
+        background: #ff9900;
+        color: white;
+        font-weight: 700;
+        font-size: 0.85rem;
+        line-height: 28px;
+        text-align: center;
+        position: absolute;
+        top: 12px;
+        right: -30px;
+        transform: rotate(45deg);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        user-select: none;
+        pointer-events: none;
+        z-index: 3;
+        animation: bounce 2s infinite ease-in-out;
+      }
+
+      @keyframes bounce {
+        0%, 100% {
+          transform: rotate(45deg) translateY(0);
+        }
+        50% {
+          transform: rotate(45deg) translateY(-5px);
+        }
+      }
+
+
         @media (max-width: 1200px) {
           .projects-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -152,11 +181,11 @@ const Projects = (props) => {
             gap: 2rem;
             padding: 0.5rem;
           }
-          
+
           .container {
             padding: 0 1rem;
           }
-          
+
           .section-title {
             font-size: 1.8rem;
             margin-bottom: 2rem;
@@ -170,12 +199,15 @@ const Projects = (props) => {
           <div className="container">
             {data ? (
               <Fade>
-                <h2 className="section-title">
-                  Projects
-                </h2>
+                <h2 className="section-title">Projects</h2>
                 <div className="projects-grid">
                   {currentProjects?.map((project) => (
-                    <ProjectCard key={project.title} project={project} />
+                    <div key={project.title} style={{ position: 'relative' }}>
+                      {project.featured && (
+                        <div className="ribbon">Top Pick</div>
+                      )}
+                      <ProjectCard project={project} />
+                    </div>
                   ))}
                 </div>
 

@@ -7,7 +7,8 @@
       "links": [
         { "text": "GitHub", "href": "https://github.com/Adity-star/Wildfire-smoke-detector" }
       ],
-      "tags": ["Deep Learning", "Computer Vision", "TensorFlow", "React", "AI for Environment"]
+      "tags": ["Deep Learning", "Computer Vision", "TensorFlow", "React", "AI for Environment"],
+      "featured":true
     },
       {
     "image": "images/projects/mcpyfinance.png",
@@ -17,7 +18,8 @@
       { "text": "GitHub", "href": "https://github.com/Adity-star/mcp-yfinance-server" },
       { "text": "Live Demo", "href": "https://msei.ai/app/adity-star-mcp-yfinance-server" }
     ],
-    "tags": ["MCP Protocol", "Yahoo Finance", "LLM Integration", "Real-time API", "MSSEP"]
+    "tags": ["MCP Protocol", "Yahoo Finance", "LLM Integration", "Real-time API", "MSSEP"],
+    "featured":true
     },
     {
       "image": "images/projects/breastcancer.png",
@@ -44,7 +46,8 @@
       "links": [
         { "text": "GitHub", "href": "https://github.com/Adity-star/AutoClaimML" }
       ],
-      "tags": ["Data Pipeline", "Machine Learning", "Python", "Pandas", "Scikit-learn"]
+      "tags": ["Data Pipeline", "Machine Learning", "Python", "Pandas", "Scikit-learn"],
+      "featured":true
     },
     {
       "image": "images/projects/textsummarization.png",
