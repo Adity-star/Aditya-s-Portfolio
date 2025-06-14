@@ -1,164 +1,144 @@
 import React, { useState, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
 import { Container, Col, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import Fade from 'react-reveal/Fade';
-import Slide from 'react-reveal/Slide';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import CountUp from 'react-countup';
 import Header from './Header';
-import endpoints from '../constants/endpoints';
 import FallbackSpinner from './FallbackSpinner';
 
-// Styled heading with hover effect
-const Heading = styled.div`
-  font-size: 1.5em;
-  font-weight: 700;
-  color: #2c3e50;
-  margin: 20px 0 15px;
-  letter-spacing: 0.05em;
-  border-left: 4px solid #3498db;
-  padding-left: 10px;
-  user-select: none;
-  cursor: default;
-  transition: color 0.3s ease;
+const Section = styled.div`
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  color: inherit;
 
   &:hover {
-    color: #2980b9;
+    transform: translateY(-5px);
+  }
+`;
+
+const SectionTitle = styled.h3`
+  color: var(--bs-primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--bs-primary);
+  padding-left: 10px;
+
+  [data-bs-theme="dark"] & {
+    color: var(--bs-light);
+    border-left-color: var(--bs-light);
+  }
+`;
+
+const SectionContent = styled.p`
+  color: inherit;
+  line-height: 1.8;
+  font-size: 1.1em;
+  margin: 0;
+  opacity: 1;
+  font-weight: 400;
+
+  [data-bs-theme="dark"] & {
+    color: #e0e0e0;
+  }
+`;
+
+const AboutContainer = styled.div`
+  color: inherit;
+
+  [data-bs-theme="dark"] & {
+    color: #ffffff;
+  }
+
+  [data-bs-theme="light"] & {
+    color: #000000;
   }
 `;
 
 const styles = {
-  introTextContainer: {
-    whiteSpace: 'pre-wrap',
-    textAlign: 'left',
-    fontSize: '1.1em',
-    fontWeight: 400,
-    lineHeight: 1.8,
-  },
   introImageContainer: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    height: '100%',
+    position: 'sticky',
+    top: '2rem',
   },
   image: {
     width: '100%',
     maxWidth: '350px',
     borderRadius: '12px',
     objectFit: 'cover',
-  },
-  impactContainer: {
-    marginTop: 40,
-  },
-  impactItem: {
-    textAlign: 'center',
-    flex: 1,
-  },
-  impactValue: {
-    fontSize: '2em',
-    fontWeight: '700',
-    color: '#3498db',
-  },
-  impactLabel: {
-    marginTop: '0.5em',
-    fontWeight: '600',
-    color: '#2c3e50',
-  },
-  impactRow: {
-    display: 'flex',
-    gap: '2rem',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
   },
 };
 
-const impacts = [
-  { label: 'Projects Delivered', value: 5 },
-  { label: 'Mentees Guided', value: 12 },
-  { label: 'Research Papers', value: 2 },
-];
-
-function ImpactHighlights() {
-  return (
-    <div style={styles.impactContainer}>
-      <h3 style={{ color: '#2c3e50', marginBottom: 20 }}>🚀 Impact Highlights</h3>
-      <div style={styles.impactRow}>
-        {impacts.map(({ label, value }) => (
-          <Fade key={label} bottom cascade>
-            <div style={styles.impactItem}>
-              <CountUp end={value} duration={2} delay={0}>
-                {({ countUpRef }) => (
-                  <div style={styles.impactValue} ref={countUpRef} />
-                )}
-              </CountUp>
-              <p style={styles.impactLabel}>{label}</p>
-            </div>
-          </Fade>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function About({ header }) {
+const About = ({ header }) => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch(endpoints.about)
+    fetch('/profile/about.json')
       .then((res) => res.json())
-      .then(setData)
-      .catch((err) => console.error(err));
+      .then((res) => setData(res))
+      .catch((err) => console.error('Error loading about data:', err));
   }, []);
+
+  const renderSection = (title, content, delay) => (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay }}
+    >
+      <Section>
+        <SectionTitle>{title}</SectionTitle>
+        <SectionContent>{content}</SectionContent>
+      </Section>
+    </motion.div>
+  );
 
   return (
     <>
       <Header title={header} />
-      <div className="section-content-container">
-        <Container>
-          {data ? (
-            <Fade>
+      {data ? (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <AboutContainer>
+            <Container className="section-content-container">
               <Row className="align-items-center">
-                <Col md={7} xs={12} style={styles.introTextContainer}>
-                  <Slide left cascade>
-                    <Heading>👋 Who I Am</Heading>
-                  </Slide>
-                  <ReactMarkdown>{data.intro}</ReactMarkdown>
-
-                  <Slide left cascade>
-                    <Heading>⚙️ What I Do</Heading>
-                  </Slide>
-                  <ReactMarkdown>{data.whatIDo}</ReactMarkdown>
-
-                  <Slide left cascade>
-                    <Heading>🧠 How I Think</Heading>
-                  </Slide>
-                  <ReactMarkdown>{data.mindset}</ReactMarkdown>
-
-                  <Slide left cascade>
-                    <Heading>🌱 Beyond Code</Heading>
-                  </Slide>
-                  <ReactMarkdown>{data.personal}</ReactMarkdown>
-
-              
+                <Col md={8}>
+                  {renderSection('Intro', data.Intro, 0.3)}
+                  {renderSection('What I Do', data.whatIDo, 0.4)}
+                  {renderSection('Mindset', data.Mindset, 0.5)}
+                  {renderSection('Personal', data.Personal, 0.6)}
                 </Col>
-
-                <Col md={5} xs={12} style={styles.introImageContainer}>
-                  <img
-                    src={data.imageSource}
-                    alt="profile"
-                    style={styles.image}
-                  />
+                <Col md={4}>
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    style={styles.introImageContainer}
+                  >
+                    <img
+                      src={data.imageSource}
+                      alt="profile"
+                      style={styles.image}
+                    />
+                  </motion.div>
                 </Col>
               </Row>
-            </Fade>
-          ) : (
-            <FallbackSpinner />
-          )}
-        </Container>
-      </div>
+            </Container>
+          </AboutContainer>
+        </motion.div>
+      ) : (
+        <FallbackSpinner />
+      )}
     </>
   );
-}
+};
 
 About.propTypes = {
   header: PropTypes.string.isRequired,

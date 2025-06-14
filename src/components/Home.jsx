@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
-import Fade from 'react-reveal';
+import { motion } from 'framer-motion';
 import endpoints from '../constants/endpoints';
 import Social from './Social';
 import FallbackSpinner from './FallbackSpinner';
@@ -63,43 +63,76 @@ function Home() {
   }, []);
 
   return data ? (
-    <Fade>
-      <div style={styles.mainContainer}>
-        <h1 style={styles.nameStyle}>{data?.name}</h1>
-        <p style={styles.taglineStyle}>{data?.tagline}</p>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      style={styles.mainContainer}
+    >
+      <motion.h1
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        style={styles.nameStyle}
+      >
+        {data?.name}
+      </motion.h1>
+      <motion.p
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        style={styles.taglineStyle}
+      >
+        {data?.tagline}
+      </motion.p>
 
-        <div style={styles.roleRow}>
-          <span>I&apos;m&nbsp;</span>
-          <Typewriter
-            options={{
-              loop: true,
-              autoStart: true,
-              strings: data?.roles,
-            }}
-          />
-        </div>
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+        style={styles.roleRow}
+      >
+        <span>I&apos;m&nbsp;</span>
+        <Typewriter
+          options={{
+            loop: true,
+            autoStart: true,
+            strings: data?.roles,
+          }}
+        />
+      </motion.div>
 
-        <div style={styles.ctaContainer}>
-          {data?.cta?.resumeLink && (
-            <a href={data.cta.resumeLink} style={styles.button} target="_blank" rel="noopener noreferrer">
-              Download Resume
-            </a>
-          )}
-          {data?.cta?.github && (
-            <a href={data.cta.github} style={styles.button} target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-          )}
-          {data?.cta?.linkedin && (
-            <a href={data.cta.linkedin} style={styles.button} target="_blank" rel="noopener noreferrer">
-              LinkedIn
-            </a>
-          )}
-        </div>
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
+        style={styles.ctaContainer}
+      >
+        {data?.cta?.resumeLink && (
+          <a href={data.cta.resumeLink} style={styles.button} target="_blank" rel="noopener noreferrer">
+            Download Resume
+          </a>
+        )}
+        {data?.cta?.github && (
+          <a href={data.cta.github} style={styles.button} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        )}
+        {data?.cta?.linkedin && (
+          <a href={data.cta.linkedin} style={styles.button} target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        )}
+      </motion.div>
 
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+      >
         <Social />
-      </div>
-    </Fade>
+      </motion.div>
+    </motion.div>
   ) : <FallbackSpinner />;
 }
 

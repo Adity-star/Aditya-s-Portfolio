@@ -4,494 +4,57 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/images/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0a0a0a" />
-    <meta name="description" content="AI Engineer Portfolio - Pioneering the Future of Artificial Intelligence" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Portfolio Website"
+    />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/logo.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-    <title>AI Engineer Portfolio | Future-Forward Intelligence</title>
-    
+    <title>Portfolio Website</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      :root {
-        --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        --secondary-gradient: linear-gradient(45deg, #00ffff, #0080ff, #4169e1);
-        --neural-gradient: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff);
-        --dark-bg: #0a0a0a;
-        --card-bg: rgba(20, 20, 30, 0.8);
-        --glass-bg: rgba(255, 255, 255, 0.05);
-        --text-primary: #ffffff;
-        --text-secondary: #b3b3cc;
-        --accent-blue: #00ffff;
-        --accent-purple: #8a2be2;
-      }
-
-      body {
-        font-family: 'Inter', sans-serif;
-        background: var(--dark-bg);
-        color: var(--text-primary);
-        overflow-x: hidden;
-        line-height: 1.6;
-      }
-
-      /* Neural Network Background */
-      #neural-network {
+      #particles-js {
         position: fixed;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 100%;
+        top: 0;
+        left: 0;
         z-index: 0;
         pointer-events: none;
-        background: 
-          radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.15) 0%, transparent 60%),
-          radial-gradient(circle at 80% 20%, rgba(138, 43, 226, 0.12) 0%, transparent 60%),
-          radial-gradient(circle at 40% 80%, rgba(0, 255, 255, 0.08) 0%, transparent 60%),
-          radial-gradient(circle at 60% 30%, rgba(255, 0, 110, 0.06) 0%, transparent 50%),
-          linear-gradient(45deg, rgba(102, 126, 234, 0.02) 0%, rgba(138, 43, 226, 0.02) 100%);
-        animation: backgroundPulse 8s ease-in-out infinite;
+        background: transparent;
       }
-
-      @keyframes backgroundPulse {
-        0%, 100% { 
-          filter: brightness(1) saturate(1);
-          transform: scale(1);
-        }
-        50% { 
-          filter: brightness(1.2) saturate(1.3);
-          transform: scale(1.02);
-        }
-      }
-
-      /* Floating particles for AI atmosphere */
-      .ai-particle {
-        position: absolute;
-        border-radius: 50%;
-        animation: floatAdvanced 12s infinite linear;
-        opacity: 0;
-      }
-
-      @keyframes floatAdvanced {
-        0% {
-          transform: translateY(100vh) translateX(0) rotate(0deg) scale(0);
-          opacity: 0;
-          filter: blur(2px);
-        }
-        5% {
-          opacity: 0.8;
-          filter: blur(0px);
-          transform: translateY(95vh) translateX(10px) rotate(10deg) scale(0.5);
-        }
-        25% {
-          transform: translateY(75vh) translateX(-20px) rotate(90deg) scale(1);
-          opacity: 1;
-        }
-        50% {
-          transform: translateY(50vh) translateX(30px) rotate(180deg) scale(1.2);
-          opacity: 0.9;
-        }
-        75% {
-          transform: translateY(25vh) translateX(-10px) rotate(270deg) scale(0.8);
-          opacity: 0.7;
-        }
-        95% {
-          opacity: 0.3;
-          filter: blur(1px);
-        }
-        100% {
-          transform: translateY(-10vh) translateX(0) rotate(360deg) scale(0);
-          opacity: 0;
-          filter: blur(3px);
-        }
-      }
-
-      /* Morphing geometric shapes */
-      .morph-shape {
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(45deg, rgba(102, 126, 234, 0.3), rgba(138, 43, 226, 0.2));
-        border-radius: 50%;
-        animation: morphFloat 15s infinite ease-in-out;
-        filter: blur(1px);
-      }
-
-      .morph-shape:nth-child(odd) {
-        animation-direction: reverse;
-        background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 110, 0.1));
-      }
-
-      @keyframes morphFloat {
-        0% {
-          border-radius: 50%;
-          transform: translateY(0) rotate(0deg) scale(1);
-        }
-        25% {
-          border-radius: 10px 50% 10px 50%;
-          transform: translateY(-30px) rotate(90deg) scale(1.1);
-        }
-        50% {
-          border-radius: 10px;
-          transform: translateY(-60px) rotate(180deg) scale(0.9);
-        }
-        75% {
-          border-radius: 50% 10px 50% 10px;
-          transform: translateY(-30px) rotate(270deg) scale(1.2);
-        }
-        100% {
-          border-radius: 50%;
-          transform: translateY(0) rotate(360deg) scale(1);
-        }
-      }
-
-      /* Main content container */
       #root {
         position: relative;
         z-index: 1;
-        min-height: 100vh;
-      }
-
-      /* Hero Section */
-      .hero-section {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        background: linear-gradient(45deg, transparent 30%, rgba(102, 126, 234, 0.05) 70%);
-      }
-
-      .hero-content {
-        text-align: center;
-        max-width: 800px;
-        padding: 2rem;
-        position: relative;
-      }
-
-      .hero-title {
-        font-size: clamp(3rem, 8vw, 6rem);
-        font-weight: 700;
-        background: var(--neural-gradient);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 200% 200%;
-        animation: gradientShift 4s ease-in-out infinite;
-        margin-bottom: 1rem;
-        letter-spacing: -0.02em;
-      }
-
-      .hero-subtitle {
-        font-size: clamp(1.2rem, 3vw, 1.8rem);
-        color: var(--text-secondary);
-        margin-bottom: 2rem;
-        font-weight: 300;
-      }
-
-      .hero-description {
-        font-size: 1.1rem;
-        color: var(--text-secondary);
-        margin-bottom: 3rem;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.8;
-      }
-
-      @keyframes gradientShift {
-        0%, 100% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-      }
-
-      /* Glowing CTA Button */
-      .cta-button {
-        display: inline-block;
-        padding: 1rem 2.5rem;
-        background: var(--primary-gradient);
-        color: white;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: 600;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-      }
-
-      .cta-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
-      }
-
-      .cta-button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-        transition: left 0.5s;
-      }
-
-      .cta-button:hover::before {
-        left: 100%;
-      }
-
-      /* Neural connection animation */
-      .neural-connections {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-      }
-
-      .connection-line {
-        position: absolute;
-        background: var(--accent-blue);
-        height: 1px;
-        opacity: 0.3;
-        animation: pulse 3s infinite;
-      }
-
-      @keyframes pulse {
-        0%, 100% { opacity: 0.1; }
-        50% { opacity: 0.6; }
-      }
-
-
-
-      /* Responsive design */
-      @media (max-width: 768px) {
-        .hero-content {
-          padding: 1rem;
-        }
-      }
-
-      /* Loading animation */
-      .loading-bar {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        height: 4px;
-        background: linear-gradient(90deg, 
-          rgba(102, 126, 234, 0.8) 0%, 
-          rgba(0, 255, 255, 1) 25%, 
-          rgba(138, 43, 226, 0.9) 50%, 
-          rgba(255, 0, 110, 0.8) 75%, 
-          rgba(102, 126, 234, 0.8) 100%);
-        background-size: 200% 100%;
-        animation: loading 4s ease-in-out infinite, shimmer 2s ease-in-out infinite;
-        z-index: 1000;
-        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-      }
-
-      @keyframes loading {
-        0% { width: 0%; }
-        50% { width: 75%; }
-        100% { width: 100%; }
-      }
-
-      @keyframes shimmer {
-        0% { background-position: -200% 0; }
-        100% { background-position: 200% 0; }
-      }
-
-      /* Energy waves */
-      .energy-wave {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        border: 2px solid rgba(0, 255, 255, 0.1);
-        border-radius: 50%;
-        animation: energyPulse 6s infinite ease-in-out;
-      }
-
-      .energy-wave:nth-child(2) {
-        animation-delay: -2s;
-        border-color: rgba(138, 43, 226, 0.1);
-      }
-
-      .energy-wave:nth-child(3) {
-        animation-delay: -4s;
-        border-color: rgba(255, 0, 110, 0.1);
-      }
-
-      @keyframes energyPulse {
-        0% {
-          transform: scale(0.5);
-          opacity: 1;
-        }
-        50% {
-          transform: scale(1.5);
-          opacity: 0.5;
-        }
-        100% {
-          transform: scale(2.5);
-          opacity: 0;
-        }
-      }
-
-      /* Circuit patterns */
-      .circuit-line {
-        position: absolute;
-        background: linear-gradient(90deg, 
-          transparent 0%, 
-          rgba(0, 255, 255, 0.3) 50%, 
-          transparent 100%);
-        height: 1px;
-        animation: circuitFlow 8s infinite linear;
-      }
-
-      .circuit-line:nth-child(even) {
-        animation-direction: reverse;
-        background: linear-gradient(90deg, 
-          transparent 0%, 
-          rgba(138, 43, 226, 0.3) 50%, 
-          transparent 100%);
-      }
-
-      @keyframes circuitFlow {
-        0% {
-          transform: translateX(-100px);
-          opacity: 0;
-        }
-        10% {
-          opacity: 1;
-        }
-        90% {
-          opacity: 1;
-        }
-        100% {
-          transform: translateX(calc(100vw + 100px));
-          opacity: 0;
-        }
       }
     </style>
   </head>
   <body>
-    <!-- Neural Network Background -->
-    <div id="neural-network">
-      <!-- Energy waves -->
-      <div class="energy-wave" style="top: 20%; left: 10%;"></div>
-      <div class="energy-wave" style="top: 60%; right: 15%;"></div>
-      <div class="energy-wave" style="bottom: 30%; left: 60%;"></div>
-      
-      <!-- Circuit patterns -->
-      <div class="circuit-line" style="top: 25%; width: 300px; animation-delay: 0s;"></div>
-      <div class="circuit-line" style="top: 45%; width: 400px; animation-delay: -2s;"></div>
-      <div class="circuit-line" style="top: 65%; width: 250px; animation-delay: -4s;"></div>
-      <div class="circuit-line" style="top: 85%; width: 350px; animation-delay: -6s;"></div>
-      
-      <!-- Morphing shapes -->
-      <div class="morph-shape" style="top: 15%; left: 20%; animation-delay: 0s;"></div>
-      <div class="morph-shape" style="top: 70%; right: 25%; animation-delay: -5s;"></div>
-      <div class="morph-shape" style="bottom: 20%; left: 70%; animation-delay: -10s;"></div>
-    </div>
-    
-    <!-- Loading bar -->
-    <div class="loading-bar"></div>
-    
-    <!-- Main Content -->
+    <div id="particles-js"></div>
     <div id="root"></div>
 
-    <!-- Enhanced Particles.js -->
+    <!-- particles.js library -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    
-    <script>
-      // Initialize advanced particles
-      window.onload = function() {
-        // Create floating AI particles with enhanced effects
-        function createAIParticles() {
-          const container = document.getElementById('neural-network');
-          
-          setInterval(() => {
-            const particle = document.createElement('div');
-            particle.className = 'ai-particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 3 + 's';
-            particle.style.animationDuration = (Math.random() * 8 + 8) + 's';
-            
-            // Enhanced particle sizes and effects
-            const size = Math.random() * 6 + 2;
-            particle.style.width = size + 'px';
-            particle.style.height = size + 'px';
-            
-            // Dynamic colors with glow effect
-            const colors = [
-              'rgba(0, 255, 255, 0.8)',
-              'rgba(138, 43, 226, 0.7)',
-              'rgba(102, 126, 234, 0.6)',
-              'rgba(255, 0, 110, 0.5)'
-            ];
-            const color = colors[Math.floor(Math.random() * colors.length)];
-            particle.style.background = color;
-            particle.style.boxShadow = `0 0 ${size * 2}px ${color}`;
-            
-            container.appendChild(particle);
-            
-            // Remove particle after animation
-            setTimeout(() => {
-              if (container.contains(particle)) {
-                container.removeChild(particle);
-              }
-            }, 16000);
-          }, 150);
-        }
-        
-        // Create floating geometric shapes
-        function createGeometricShapes() {
-          const container = document.getElementById('neural-network');
-          
-          setInterval(() => {
-            const shape = document.createElement('div');
-            shape.className = 'morph-shape';
-            shape.style.left = Math.random() * 100 + '%';
-            shape.style.top = Math.random() * 100 + '%';
-            shape.style.animationDelay = Math.random() * 5 + 's';
-            shape.style.animationDuration = (Math.random() * 10 + 10) + 's';
-            
-            container.appendChild(shape);
-            
-            setTimeout(() => {
-              if (container.contains(shape)) {
-                container.removeChild(shape);
-              }
-            }, 20000);
-          }, 3000);
-        }
-        
-        createAIParticles();
-        createGeometricShapes();
 
-        // Enhanced particles.js configuration
-        particlesJS('neural-network', {
+    <!-- Initialize particles.js -->
+    <script>
+      window.onload = function() {
+        particlesJS('particles-js', {
           "particles": {
             "number": {
-              "value": 120,
+              "value": 100,
               "density": {
                 "enable": true,
-                "value_area": 800
+                "value_area": 900
               }
             },
             "color": {
-              "value": ["#00ffff", "#8a2be2", "#667eea", "#764ba2", "#ff006e"]
+              "value": ["#667eea", "#764ba2", "#00ffff", "#00aaff"] /* purples + electric blue */
             },
             "shape": {
-              "type": ["circle", "triangle", "polygon", "star"],
+              "type": ["circle", "polygon"],
               "polygon": {
-                "nb_sides": 6
-              },
-              "star": {
-                "nb_sides": 5
+                "nb_sides": 6 /* hexagon */
               }
             },
             "opacity": {
@@ -499,8 +62,8 @@
               "random": true,
               "anim": {
                 "enable": true,
-                "speed": 2,
-                "opacity_min": 0.05,
+                "speed": 1,
+                "opacity_min": 0.1,
                 "sync": false
               }
             },
@@ -508,18 +71,8 @@
               "value": 4,
               "random": true,
               "anim": {
-                "enable": true,
-                "speed": 3,
-                "size_min": 0.5,
-                "sync": false
+                "enable": false
               }
-            },
-            "line_linked": {
-              "enable": true,
-              "distance": 180,
-              "color": "#00ffff",
-              "opacity": 0.3,
-              "width": 1.5
             },
             "move": {
               "enable": true,
@@ -527,13 +80,8 @@
               "direction": "none",
               "random": true,
               "straight": false,
-              "out_mode": "bounce",
-              "bounce": true,
-              "attract": {
-                "enable": true,
-                "rotateX": 800,
-                "rotateY": 1600
-              }
+              "out_mode": "out",
+              "bounce": false
             }
           },
           "interactivity": {
@@ -541,80 +89,29 @@
             "events": {
               "onhover": {
                 "enable": true,
-                "mode": ["grab", "bubble"]
+                "mode": "repulse"
               },
               "onclick": {
                 "enable": true,
-                "mode": ["push", "repulse"]
+                "mode": "push"
               },
               "resize": true
             },
             "modes": {
-              "grab": {
-                "distance": 250,
-                "line_linked": {
-                  "opacity": 0.8
-                }
-              },
-              "bubble": {
-                "distance": 200,
-                "size": 8,
-                "duration": 2,
-                "opacity": 0.8,
-                "speed": 3
-              },
               "repulse": {
-                "distance": 150,
+                "distance": 120,
                 "duration": 0.4
               },
               "push": {
-                "particles_nb": 12
+                "particles_nb": 10
               }
             }
           },
           "retina_detect": true
         });
-        
-        // Add smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-              target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
-            }
-          });
-        });
-        
-        // Dynamic background intensity based on mouse movement
-        let mouseX = 0, mouseY = 0;
-        document.addEventListener('mousemove', (e) => {
-          mouseX = e.clientX / window.innerWidth;
-          mouseY = e.clientY / window.innerHeight;
-          
-          const neuralBg = document.getElementById('neural-network');
-          const intensity = (mouseX + mouseY) / 2;
-          neuralBg.style.filter = `brightness(${1 + intensity * 0.3}) saturate(${1 + intensity * 0.5})`;
-        });
-        
-        // Enhanced loading bar with completion effect
-        setTimeout(() => {
-          const loadingBar = document.querySelector('.loading-bar');
-          if (loadingBar) {
-            loadingBar.style.width = '100%';
-            loadingBar.style.boxShadow = '0 0 30px rgba(0, 255, 255, 0.8)';
-            
-            setTimeout(() => {
-              loadingBar.style.opacity = '0';
-              loadingBar.style.transform = 'scaleY(0)';
-              setTimeout(() => loadingBar.remove(), 500);
-            }, 1000);
-          }
-        }, 4000);
       };
     </script>
   </body>
 </html>
+
+

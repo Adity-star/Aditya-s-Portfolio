@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Container, Row, Button } from 'react-bootstrap';
 import { ThemeContext } from 'styled-components';
 import PropTypes from 'prop-types';
-import Fade from 'react-reveal/Fade';
+import { motion } from 'framer-motion';
 import Header from './Header';
 import endpoints from '../constants/endpoints';
 import ProjectCard from './projects/ProjectCard';
@@ -12,8 +12,6 @@ const Projects = (props) => {
   const theme = useContext(ThemeContext);
   const { header } = props;
   const [data, setData] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
 
   useEffect(() => {
     fetch(endpoints.projects, {
@@ -23,17 +21,6 @@ const Projects = (props) => {
       .then((res) => setData(res))
       .catch((err) => err);
   }, []);
-
-  const totalPages = Math.ceil((data?.projects?.length || 0) / itemsPerPage);
-  const currentProjects = data?.projects?.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
-
-  const handlePageChange = (newPage) => {
-    setCurrentPage(newPage);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <>
@@ -48,6 +35,7 @@ const Projects = (props) => {
           margin: 0;
           display: flex;
           flex-direction: column;
+          margin-top: 100rem;
         }
 
         .section-content-container {
@@ -57,7 +45,8 @@ const Projects = (props) => {
           flex-direction: column;
           position: relative;
           z-index: 1;
-          padding-top: 50rem;
+          padding-top: 0;
+          top: 0;
         }
 
         .container {
@@ -93,76 +82,34 @@ const Projects = (props) => {
           z-index: 2;
         }
 
-        .pagination-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 1rem;
-          margin-top: 2rem;
-          margin-bottom: 2rem;
-          position: relative;
-          z-index: 2;
-        }
-
-        .pagination-button {
-          background: ${theme.cardBackground};
-          border: 1px solid ${theme.cardBorderColor};
-          padding: 10px 20px;
-          border-radius: 25px;
-          font-weight: 600;
-          color: ${theme.color};
-          cursor: pointer;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .pagination-button:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-          background: ${theme.cardFooterBackground};
-        }
-
-        .pagination-button:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-          transform: none;
-        }
-
-        .pagination-info {
-          color: ${theme.color};
-          font-weight: 600;
-          font-size: 1.1rem;
-        }
-
         .ribbon {
-        width: 100px;
-        height: 28px;
-        background: #ff9900;
-        color: white;
-        font-weight: 700;
-        font-size: 0.85rem;
-        line-height: 28px;
-        text-align: center;
-        position: absolute;
-        top: 12px;
-        right: -30px;
-        transform: rotate(45deg);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        user-select: none;
-        pointer-events: none;
-        z-index: 3;
-        animation: bounce 2s infinite ease-in-out;
-      }
-
-      @keyframes bounce {
-        0%, 100% {
-          transform: rotate(45deg) translateY(0);
+          width: 100px;
+          height: 28px;
+          background: #ff9900;
+          color: white;
+          font-weight: 700;
+          font-size: 0.85rem;
+          line-height: 28px;
+          text-align: center;
+          position: absolute;
+          top: 12px;
+          right: -30px;
+          transform: rotate(45deg);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+          user-select: none;
+          pointer-events: none;
+          z-index: 3;
+          animation: bounce 2s infinite ease-in-out;
         }
-        50% {
-          transform: rotate(45deg) translateY(-5px);
-        }
-      }
 
+        @keyframes bounce {
+          0%, 100% {
+            transform: rotate(45deg) translateY(0);
+          }
+          50% {
+            transform: rotate(45deg) translateY(-5px);
+          }
+        }
 
         @media (max-width: 1200px) {
           .projects-grid {
@@ -172,8 +119,12 @@ const Projects = (props) => {
         }
 
         @media (max-width: 768px) {
+          .projects-section-bg {
+            margin-top: 10rem;
+          }
+          
           .section-content-container {
-            padding-top: 50rem;
+            padding-top: 0;
           }
 
           .projects-grid {
@@ -198,39 +149,34 @@ const Projects = (props) => {
           <Header header={header} />
           <div className="container">
             {data ? (
-              <Fade>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 <h2 className="section-title">Projects</h2>
-                <div className="projects-grid">
-                  {currentProjects?.map((project) => (
-                    <div key={project.title} style={{ position: 'relative' }}>
+                <motion.div 
+                  className="projects-grid"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  {data.projects?.map((project, idx) => (
+                    <motion.div 
+                      key={project.title} 
+                      style={{ position: 'relative' }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    >
                       {project.featured && (
                         <div className="ribbon">Top Pick</div>
                       )}
                       <ProjectCard project={project} />
-                    </div>
+                    </motion.div>
                   ))}
-                </div>
-
-                <div className="pagination-container">
-                  <button
-                    className="pagination-button"
-                    onClick={() => handlePageChange(currentPage - 1)}
-                    disabled={currentPage === 1}
-                  >
-                    Previous
-                  </button>
-                  <span className="pagination-info">
-                    Page {currentPage} of {totalPages}
-                  </span>
-                  <button
-                    className="pagination-button"
-                    onClick={() => handlePageChange(currentPage + 1)}
-                    disabled={currentPage === totalPages}
-                  >
-                    Next
-                  </button>
-                </div>
-              </Fade>
+                </motion.div>
+              </motion.div>
             ) : (
               <FallbackSpinner />
             )}

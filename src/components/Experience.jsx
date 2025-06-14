@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
 import { ThemeContext } from 'styled-components';
-import Fade from 'react-reveal';
+import { motion } from 'framer-motion';
 import Header from './Header';
 import endpoints from '../constants/endpoints';
 import FallbackSpinner from './FallbackSpinner';
@@ -50,15 +50,24 @@ function Experience(props) {
 
       {data
         ? (
-          <div className="section-content-container">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="section-content-container"
+          >
             <Container>
               <Timeline
                 lineColor={theme.timelineLineColor}
               >
-                {data.map((item) => (
-                  <Fade>
+                {data.map((item, index) => (
+                  <motion.div
+                    key={item.title + item.dateText}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
                     <TimelineItem
-                      key={item.title + item.dateText}
                       dateText={item.dateText}
                       dateInnerStyle={{ background: theme.accentColor }}
                       style={styles.itemStyle}
@@ -95,11 +104,11 @@ function Experience(props) {
                         ))}
                       </ul>
                     </TimelineItem>
-                  </Fade>
+                  </motion.div>
                 ))}
               </Timeline>
             </Container>
-          </div>
+          </motion.div>
         ) : <FallbackSpinner /> }
     </>
   );

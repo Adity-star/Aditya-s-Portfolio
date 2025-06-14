@@ -1,37 +1,18 @@
 {
   "experiences": [
     {
-      "title": "Freelance AI & Data Science Consultant",
-      "subtitle": "Self-Employed / Multiple Clients",
-      "workType": "Freelance",
+      "title": "AI & Data Science Project Developer",
+      "subtitle": "Independent | Self-Initiated Projects & Open Source",
+      "workType": "Independent",
+      "dateText": "Mar 2024 – Present",
       "workDescription": [
-        "Delivered **8+ end-to-end AI solutions** to startups, nonprofits, and small businesses.",
-        "Built **LLM-powered research bots**, **RAG frameworks**, and **predictive models** tailored to client-specific problems.",
-        "Deployed solutions using **Docker, FastAPI**, and **Streamlit**, ensuring scalability and quick iteration cycles.",
-        "Worked directly with founders and technical teams to shape product direction and ML roadmap."
-      ],
-      "dateText": "Jul 2023 – Present"
-    },
-    {
-      "title": "LangChain & GenAI Systems Developer",
-      "subtitle": "Independent Projects",
-      "workType": "Product-Based Freelance",
-      "workDescription": [
-        "Built full-stack GenAI prototypes using **LangChain**, **LlamaIndex**, and **OpenAI API**.",
-        "Designed autonomous agents for tasks like stock research, document summarization, and chatbot interfaces.",
-        "Created reusable codebases and mini-frameworks for smart LLM pipelines, integrated with custom UIs."
-      ],
-      "dateText": "Mar 2023 – Present"
-    },
-    {
-      "title": "AI Research & Engineering Intern",
-      "subtitle": "Startup/NGO Collaborations",
-      "workType": "Internship",
-      "workDescription": [
-        "Collaborated on research-driven ML projects in NLP and predictive analytics.",
-        "Worked on **fake news detection**, **student performance prediction**, and **text summarization** tools using scikit-learn and HuggingFace."
-      ],
-      "dateText": "Aug 2022 – Feb 2023"
+        "Developed and deployed 8+ real-world AI/ML projects covering computer vision, NLP, LLMs, and time-series forecasting.",
+        "Built full-stack solutions including an AI Research Agent (LangChain + OpenAI), CNN-based Wildfire Smoke Detector, and Text Summarization Pipeline using Transformers.",
+        "Designed and optimized end-to-end workflows with FastAPI, Docker, MLflow, and DVC for scalable, production-grade delivery.",
+        "Published high-quality GitHub repositories with code, architecture diagrams, and live demos to showcase applied skills.",
+        "Created custom API services (e.g., YFinance server) and contributed to projects referenced by real-world users and communities.",
+        "Continuously learning and applying cutting-edge AI concepts such as RAG, vector databases, embeddings, and LLM agent frameworks."
+      ]
     }
   ]
 }

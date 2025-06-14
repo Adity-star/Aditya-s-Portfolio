@@ -7,8 +7,7 @@
       "links": [
         { "text": "GitHub", "href": "https://github.com/Adity-star/Wildfire-smoke-detector" }
       ],
-      "tags": ["Deep Learning", "Computer Vision", "TensorFlow", "React", "AI for Environment"],
-      "featured":true
+      "tags": ["Deep Learning", "Computer Vision", "TensorFlow", "React", "AI for Environment"]
     },
       {
     "image": "images/projects/mcpyfinance.png",
@@ -18,8 +17,7 @@
       { "text": "GitHub", "href": "https://github.com/Adity-star/mcp-yfinance-server" },
       { "text": "Live Demo", "href": "https://msei.ai/app/adity-star-mcp-yfinance-server" }
     ],
-    "tags": ["MCP Protocol", "Yahoo Finance", "LLM Integration", "Real-time API", "MSSEP"],
-    "featured":true
+    "tags": ["MCP Protocol", "Yahoo Finance", "LLM Integration", "Real-time API", "MSSEP"]
     },
     {
       "image": "images/projects/breastcancer.png",
@@ -28,8 +26,7 @@
       "links": [
         { "text": "GitHub", "href": "https://github.com/Adity-star/End-to-End-Breast-Cancer-Classification-Using-DVC-and-MLflow" }
       ],
-      "tags": ["Machine Learning", "MLflow", "DVC", "Python", "Data Science"]
-    },
+      "tags": ["Machine Learning", "MLflow", "DVC", "Python", "Data Science"]    },
     {
       "image": "images/projects/queryengine.jpg",
       "title": "Multi-Lingual Query Engine",
@@ -46,9 +43,7 @@
       "links": [
         { "text": "GitHub", "href": "https://github.com/Adity-star/AutoClaimML" }
       ],
-      "tags": ["Data Pipeline", "Machine Learning", "Python", "Pandas", "Scikit-learn"],
-      "featured":true
-    },
+      "tags": ["Data Pipeline", "Machine Learning", "Python", "Pandas", "Scikit-learn"]    },
     {
       "image": "images/projects/textsummarization.png",
       "title": "Text Summarization Project",
@@ -56,8 +51,7 @@
       "links": [
         { "text": "GitHub", "href": "https://github.com/Adity-star/Text-Summarization-Project" }
       ],
-      "tags": ["NLP", "Text Summarization", "Transformers", "Hugging Face", "Python"]
-    },
+      "tags": ["NLP", "Text Summarization", "Transformers", "Hugging Face", "Python"]    },
     {
       "image": "images/projects/perform.jpg",
       "title": "Student Performance Predictor",
@@ -65,8 +59,7 @@
       "links": [
         { "text": "GitHub", "href": "https://github.com/Adity-star/Students-Performance-indicator" }
       ],
-      "tags": ["Machine Learning", "Student Analytics", "Python", "Scikit-learn", "Pandas"]
-    },
+      "tags": ["Machine Learning", "Student Analytics", "Python", "Scikit-learn", "Pandas"]    },
     {
       "image": "images/projects/movie.png",
       "title": "Movie Recommender System",
@@ -92,8 +85,7 @@
       "links": [
         { "text": "GitHub", "href": "https://github.com/Adity-star/Road-Traffic-Accident-Severity-Prediction" }
       ],
-      "tags": ["Machine Learning", "Accident Analysis", "Python", "Scikit-learn", "Pandas"]
-    },
+      "tags": ["Machine Learning", "Accident Analysis", "Python", "Scikit-learn", "Pandas"]    },
     {
       "image": "images/projects/research.png",
       "title": "Autonomous Research Agent",
@@ -112,8 +104,7 @@
       "links": [
         { "text": "GitHub", "href": "https://github.com/Adity-star/LangChainMastery" }
       ],
-      "tags": ["LangChain", "LLMs", "AI Tools", "Tutorial", "Open Source"]
-    },
+      "tags": ["LangChain", "LLMs", "AI Tools", "Tutorial", "Open Source"]    },
     {
       "image": "images/projects/rag.png",
       "title": "RAG Framework – Complete Guide",
@@ -130,8 +121,7 @@
       "links": [
         { "text": "GitHub", "href": "https://github.com/Adity-star/Complete-DataScience-Guide" }
       ],
-      "tags": ["Data Science", "Learning Path", "Python", "Machine Learning", "Career"]
-    },
+      "tags": ["Data Science", "Learning Path", "Python", "Machine Learning", "Career"]    },
      {
       "image": "images/projects/genai.png",
       "title": "Generative AI Learning Resources",

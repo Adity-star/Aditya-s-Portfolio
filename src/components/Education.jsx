@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { Chrono } from 'react-chrono';
 import { Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import Fade from 'react-reveal/Fade';
+import { motion } from 'framer-motion';
 import { ThemeContext } from 'styled-components';
 import endpoints from '../constants/endpoints';
 import Header from './Header';
@@ -47,40 +47,44 @@ function Education({ header }) {
     <>
       <Header title={header} />
       {data ? (
-        <Fade bottom>
-          <div className="section-content-container" style={{ display: 'flex', justifyContent: 'center' }}>
-            <Container style={{ width }}>
-              <Chrono
-                items={data.education}
-                mode={mode}
-                hideControls
-                allowDynamicUpdate
-                cardHeight={200}
-                useReadMore={false}
-                theme={{
-                  primary: theme.accentColor,
-                  secondary: theme.accentColor,
-                  cardBgColor: theme.chronoTheme.cardBgColor,
-                  cardForeColor: theme.chronoTheme.cardForeColor,
-                  titleColor: theme.chronoTheme.titleColor,
-                }}
-              >
-                <div className="chrono-icons">
-                  {data.education.map((edu) =>
-                    edu.icon ? (
-                      <img
-                        key={edu.icon.src}
-                        src={edu.icon.src}
-                        alt={edu.cardTitle}
-                        style={{ width: 40, height: 40, borderRadius: '50%' }}
-                      />
-                    ) : null
-                  )}
-                </div>
-              </Chrono>
-            </Container>
-          </div>
-        </Fade>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="section-content-container"
+          style={{ display: 'flex', justifyContent: 'center' }}
+        >
+          <Container style={{ width }}>
+            <Chrono
+              items={data.education}
+              mode={mode}
+              hideControls
+              allowDynamicUpdate
+              cardHeight={200}
+              useReadMore={false}
+              theme={{
+                primary: theme.accentColor,
+                secondary: theme.accentColor,
+                cardBgColor: theme.chronoTheme.cardBgColor,
+                cardForeColor: theme.chronoTheme.cardForeColor,
+                titleColor: theme.chronoTheme.titleColor,
+              }}
+            >
+              <div className="chrono-icons">
+                {data.education.map((edu) =>
+                  edu.icon ? (
+                    <img
+                      key={edu.icon.src}
+                      src={edu.icon.src}
+                      alt={edu.cardTitle}
+                      style={{ width: 40, height: 40, borderRadius: '50%' }}
+                    />
+                  ) : null
+                )}
+              </div>
+            </Chrono>
+          </Container>
+        </motion.div>
       ) : (
         <FallbackSpinner />
       )}
